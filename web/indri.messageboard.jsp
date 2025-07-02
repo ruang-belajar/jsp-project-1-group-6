@@ -12,7 +12,7 @@
 
     request.setAttribute("list", list);
     
-    RequestDispatcher dispatcher = request.getRequestDispatcher("shakyla.messageboard.view.jsp");
+    RequestDispatcher dispatcher = request.getRequestDispatcher("indri.messageboard.view.jsp");
     dispatcher.forward(request, response);
 
 %>
