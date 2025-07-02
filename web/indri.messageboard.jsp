@@ -1,17 +1,18 @@
-<%-- 
-    Document   : indri.messageboard
-    Created on : Jun 25, 2025, 9:10:58 PM
-    Author     : Administrator
---%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="jspproject1.Messager"%>
+<%@page import="jspproject1.Message"%>
+<%
+    Messager messager = new Messager("Shakyla");
+    
+    if(request.getParameter("pengirim")!=null) {
+        messager.addMessage(request.getParameter("pengirim"), request.getParameter("pesan"));
+    }
+    
+    ArrayList<Message> list = messager.getList();
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+    request.setAttribute("list", list);
+    
+    RequestDispatcher dispatcher = request.getRequestDispatcher("shakyla.messageboard.view.jsp");
+    dispatcher.forward(request, response);
+
+%>
