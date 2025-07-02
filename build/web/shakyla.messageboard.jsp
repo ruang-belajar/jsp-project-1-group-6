@@ -1,3 +1,9 @@
+<%-- 
+    Document   : shakyla.messageboard
+    Created on : 29 Jun 2025, 14.07.20
+    Author     : USER
+--%>
+
 <%@page import="java.util.ArrayList"%>
 <%@page import="jspproject1.Messager"%>
 <%@page import="jspproject1.Message"%>
@@ -16,3 +22,4 @@
     dispatcher.forward(request, response);
 
 %>
+

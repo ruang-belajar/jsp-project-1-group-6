@@ -2,7 +2,7 @@
 <%@page import="jspproject1.Messager"%>
 <%@page import="jspproject1.Message"%>
 <%
-    Messager messager = new Messager("Shakyla");
+    Messager messager = new Messager("Vina");
     
     if(request.getParameter("pengirim")!=null) {
         messager.addMessage(request.getParameter("pengirim"), request.getParameter("pesan"));
